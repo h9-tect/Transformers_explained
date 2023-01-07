@@ -1,7 +1,5 @@
 import torch
 
-import torch
-
 from transformer import Transformer
 from data_utils import create_dataloader
 
@@ -25,3 +23,15 @@ def bleu(output_str, tgt_str):
     
     return score
 
+def evaluate(model, dataloader, criterion, device):
+    model.eval()
+    total_loss = 0.
+    with torch.no_grad():
+        for src, tgt in dataloader:
+            src, tgt = src.to(device), tgt.to(device)
+            src_mask, tgt_mask = create_mask(src, tgt)
+            output = model(src, tgt, src_mask, tgt_mask)
+            loss = criterion(output, tgt[:, 1:])
+            total_loss += loss.item()
+            
+    return total_loss / len(dataloader)
