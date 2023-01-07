@@ -48,7 +48,7 @@ In the multi-headed attention mechanism, the queries, keys, and values are proje
 
 The multi-headed attention mechanism allows the model to attend to different aspects of the input in parallel, which can improve the model's ability to capture complex dependencies in the input data.
 
-![alt text](https://machinelearningmastery.com/wp-content/uploads/2021/10/transformer_3.png)
+![alt text](https://machinelearningmastery.com/wp-content/uploads/2021/09/tour_3.png)
 
 
 
