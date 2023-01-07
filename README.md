@@ -47,6 +47,7 @@ In the multi-headed attention mechanism, the attention layer has multiple "heads
 In the multi-headed attention mechanism, the queries, keys, and values are projected using separate linear transformations, and the attention is computed independently for each head. The outputs of the different heads are then concatenated and passed through a final linear transformation to produce the final attention output.
 
 The multi-headed attention mechanism allows the model to attend to different aspects of the input in parallel, which can improve the model's ability to capture complex dependencies in the input data.
+
 ![alt text]([image_url](https://machinelearningmastery.com/wp-content/uploads/2021/09/tour_3.png))
 
 
