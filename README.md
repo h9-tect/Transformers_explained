@@ -40,5 +40,13 @@ Decoder:
 ## Attention Mechanisms
 
 The attention mechanism allows the model to selectively focus on certain parts of the input and is key to the Transformer's ability to process long-range dependencies in the input data. In the multi-headed self-attention layers of the encoder and decoder, the attention layer has multiple "heads", each of which produces a weighted sum of the input. See the detailed explanation below for more information.
-![alt text](https://machinelearningmastery.com/wp-content/uploads/2021/09/tour_3.png)
+the multi-headed attention mechanism is used in the self-attention layers of the encoder and decoder. The attention mechanism allows the model to selectively focus on certain parts of the input and is key to the Transformer's ability to process long-range dependencies in the input data.
+
+In the multi-headed attention mechanism, the attention layer has multiple "heads", each of which produces a weighted sum of the input. The input to the attention layer is a set of queries, keys, and values, and the output is a weighted sum of the values, where the weight for each value is computed using the dot product of the query with a key.
+
+In the multi-headed attention mechanism, the queries, keys, and values are projected using separate linear transformations, and the attention is computed independently for each head. The outputs of the different heads are then concatenated and passed through a final linear transformation to produce the final attention output.
+
+The multi-headed attention mechanism allows the model to attend to different aspects of the input in parallel, which can improve the model's ability to capture complex dependencies in the input data.
+<img src="[image.png](https://machinelearningmastery.com/wp-content/uploads/2021/09/tour_3.png)" width="500">
+
 
